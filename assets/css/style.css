@@ -1,4 +1,4 @@
-* {
+ {
   padding: 0%;
   margin: 0%;
 }
@@ -7,120 +7,77 @@ html {
   width: 100vw;
 }
 body {
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-}
-.grid-container {
   display: grid;
-  height: 100vh;
-  grid-template-rows: 1fr 1fr 10fr 1fr;
   grid-template-areas:
-    "navbar"
-    "filtro"
-    "main"
-    "footer";
+    "a a a a a"
+    "b c c c c"
+    "b d";
 }
-main {
-  grid-area: main;
+.a {
+  grid-area: a;
+  height: 10vh;
+  background-color: purple (255, 30, 0);
+}
+
+.page-navigation {
   display: flex;
-  background-color: beige;
+  align-items: center;
+  justify-content: center;
+}
+.filter {
+  display: flex;
+  justify-content: center;
+}
+.nav {
+  grid-area: b;
+  height: 90vh;
+  background-color: rgb(238, 179, 130);
 }
 
-footer {
-  grid-area: footer;
-  background-color: blue;
-}
-
-.nav-mobil {
-  grid-area: nav;
-  background-color: blue;
-}
-.select {
-  background-color: lightgreen;
-}
-
-.main-container {
+.navbar-text {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  align-content: center;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 8rem;
-  border: solid purple;
-}
-
-.card img {
-  width: 100%;
-}
-
-.card-container {
+.card-box {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-.footer {
-  grid-area: footer;
-  background-color: blueviolet;
-  display: flex;
-  flex-direction: column;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
 }
 
-@media (min-width: 576px) {
-  .container {
-    grid-template-columns: 15% 1fr;
-    grid-template-rows: 10% auto 10%;
-    grid-template-areas:
-      "sidebar select"
-      "sidebar main"
-      "footer main";
-  }
-
-  .select {
-    grid-area: select;
-    background-color: lightgreen;
-  }
-
-  main {
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
-  .card-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-  }
-  .nav-pc {
-    grid-area: nav-pc;
-    background-color: blue;
-  }
-
-  footer {
-    grid-area: footer;
-  }
-  .nav-mobil {
-    display: none;
-  }
+.c {
+  grid-area: c;
+  height: 80vh;
+  background-color: blueviolet (77, 8, 8);
 }
-
-@media (max-width: 575px) {
-  .card2 {
+.d {
+  grid-area: d;
+  height: 10vh;
+  background-color: blueviolet (128, 47, 0);
+}
+@media (max-width: 576px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      "b"
+      "c"
+      "d";
+  }
+  .a {
     display: none;
+  }
+  .b {
+    height: 10vh;
+  }
+  .c {
+    height: 80vh;
+  }
+  .d {
+    height: 10vh;
   }
 }

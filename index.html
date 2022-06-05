@@ -6,20 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/img/favicon.pngs" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <div class="a"></div>
-    <div class="b">
-      <ul>
-        <h3>Categorias</h3>
-        <li>Funkos</li>
-        <li>Billeteras</li>
-        <li>Broches</li>
-        <li>brochas</li>
-        <li>Maquillaje</li>
-      </ul>
+    <div class="container">
+      <div class="filter">
+        <span">Ordenar por:</span>
+        <select class="select" name="select" id="#">
+          <option value="Nuevo">Nuevos</option>
+          <option value="Ofertas">Ofertas</option>
+          <option value="Precios">Precios</option>
+        </select>
+      </div>
+      <nav class="nav-mobil">
+        <span class="material-symbols-outlined select2"> menu </span>
+        <h3>Juguetería lunar</h3>
+      </nav>
+      <nav class="sidebar">
+        <div>
+          <strong>Categories</strong>
+          <ul>
+            <li>brochas</li>
+            <li>figuras de acción</li>
+            <li>Coleccionables</li>
+            <li>Peluches</li>
+          </ul>
+        </div>
+      </nav>
+<!--main-->
+      <main class="main">
+        <div class="card-box">
+          <div class="card ">
+            <img src="assets/img/bolsa de kirby.jpeg" alt="bolsa de color rosado con bordado de personaje de videojuego llamado kirby" />
+            <h3>Bolsa Kirby </h3>
+            <button class="button">Lo quiero</button>
+          </div>
+          <div class="card card2">
+            <img src="assets/img/brochas.jpeg" alt="brochas para maquillarse el rostro con diversos colores"/>
+            <h3>Brochas sailor scout</h3>
+            <button class="button">Lo quiero</button>
+          </div>
+          <div class="card card2">
+            <img src="assets/img/cinntillo skincare.jpeg" alt="cintillos con orejas de gato que sirven para despejar el rostro en el cuidado de la piel" />
+            <h3>Cintillo para Skincare</h3>
+            <button class="button">Lo quiero</button>
+          </div>
+          <div class="card card2">
+            <img src="assets/img/evee .jpeg" alt="figuras de colección de pequeño zorro color café" />
+            <h3>Eevee Pokémon</h3>
+            <button class="button">Lo quiero</button>
+          </div>
+          <div class="card card2">
+            <img src="assets/img/lamparas.jpeg" alt="lamparas para uso infantil que tienen personajes de animación japonesa" />
+            <h3>Lamparas Totoro</h3>
+            <button class="button">Lo quiero</button>
+          </div>
+          <div class="card card2">
+            <img src="assets/img/medallon.jpeg" alt="medallon en forma de estrella de colección color dorado" />
+            <h3>Medallón</h>
+            <button class="button">Lo quiero</button>
+          </div>
+          <div class="card card2">
+            <img src="assets/img/monopoly sailor moon.jpeg" alt="juego de mesa monopoly de heroinas" />
+            <h3>Monopoly Sailor Moon</h3>
+            <button class="button">Lo quiero</button>
+          </div>
+          <div class="card card2">
+            <img src="assets/img/peluche luna.jpeg" alt="Peluche de gata morado" />
+            <h3>Peluche de Luna</h3>
+            <button class="button">Lo quiero</button>
+          </div>
+        </div>
+        <nav class="page-navigation">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </main>
+      <footer class="footer"> <p>@Naoko Takeuchi, Japan </p></footer>
     </div>
-    <div class="c"></div>
-    <div class="d">enviar</div>
   </body>
 </html>
