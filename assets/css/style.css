@@ -1,71 +1,122 @@
 * {
-    padding: 0%;
-    margin: 0%;
-  }
-  html {
-    height: 100vh;
-    width: 100vw;
-  }
-  body {
-    display: grid;
+  padding: 0%;
+  margin: 0%;
+}
+html {
+  height: 100vh;
+  width: 100vw;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr 1fr 10fr 1fr;
+  grid-template-areas:
+    "navbar"
+    "filtro"
+    "main"
+    "footer";
+}
+main {
+  grid-area: main;
+  display: flex;
+  background-color: beige;
+}
+
+footer {
+  grid-area: footer;
+  background-color: blue;
+}
+
+.nav-mobil {
+  grid-area: nav;
+  background-color: blue;
+}
+.select {
+  background-color: lightgreen;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  border: solid purple;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer {
+  grid-area: footer;
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 576px) {
+  .container {
+    grid-template-columns: 15% 1fr;
+    grid-template-rows: 10% auto 10%;
     grid-template-areas:
-      "a a a a a"
-      "b c c c c"
-      "b d d d d";
+      "sidebar select"
+      "sidebar main"
+      "footer main";
   }
-  .a {
-    grid-area: a;
-    height: 10vh;
-    background-color: aqua;
+
+  .select {
+    grid-area: select;
+    background-color: lightgreen;
   }
-  .b {
-    grid-area: b;
-    height: 90vh;
-    background-color: violet;
+
+  main {
+    grid-area: main;
   }
-  .c {
-    grid-area: c;
-    height: 80vh;
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-pc {
+    grid-area: nav-pc;
     background-color: blue;
   }
-  .d {
-    grid-area: d;
-    height: 10vh;
-    background-color: green;
+
+  footer {
+    grid-area: footer;
   }
-  @media (max-width: 576px) {
-    body {
-      display: grid;
-      grid-template-areas:
-        "b"
-        "c"
-        "d";
-    }
-    .a {
-      display: none;
-    }
-    .b {
-      grid-area: b;
-      height: 90vh;
-      background-color: violet;
-      height: 10vh;
-      flex-direction: column;
-      gap: 1rem;
-      color: whitesmoke;
-    }
-    .b ul li {
-      text-decoration: none;
-      color: whitesmoke;
-    }
-  
-    .b li {
-      border-radius: 3px;
-      margin: 2em;
-    }
+  .nav-mobil {
+    display: none;
   }
-  .c {
-    height: 80vh;
+}
+
+@media (max-width: 575px) {
+  .card2 {
+    display: none;
   }
-  .d {
-    height: 10vh;
-  }
+}
