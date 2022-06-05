@@ -32,7 +32,7 @@ body {
 .nav {
   grid-area: b;
   height: 90vh;
-  background-color: rgb(238, 179, 130);
+  background-color: aquamarine;
 }
 
 .navbar-text {
@@ -66,7 +66,7 @@ body {
 .d {
   grid-area: d;
   height: 10vh;
-  background-color: blanchedalmond;
+  background-color: aquamarine;
 }
 @media (max-width: 576px) {
   body {
