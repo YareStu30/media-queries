@@ -79,17 +79,18 @@ body {
 }
 @media (min-width: 576px) {
   body {
-    display: grid;
     grid-template-areas:
-      "b"
-      "c"
-      "d";
+      "a b b b"
+      "a c c c"
+      "a c c c"
+      "d c c c";
+    grid-template-columns: 2fr 10fr;
+    grid-template-rows: 1fr 3fr 3fr 1fr;
   }
   .a {
-    display: none;
+    height: 10vh;
   }
   .b {
-    height: 10vh;
   }
   .c {
     height: 80vh;
