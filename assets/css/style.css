@@ -8,15 +8,12 @@ html {
 }
 body {
   display: grid;
+  grid-template-rows: 1fr 1fr 8fr 1 fr;
   grid-template-areas:
-    "a a a a a"
-    "b c c c c"
-    "b d d d d";
-}
-.a {
-  grid-area: a;
-  height: 10vh;
-  background-color: blueviolet;
+    "a"
+    "b"
+    "c"
+    "d";
 }
 
 .page-navigation {
@@ -28,11 +25,20 @@ body {
   display: flex;
   justify-content: center;
   color: azure;
+  padding: 1em;
+  margin-bottom: 1em;
 }
 .nav {
-  grid-area: b;
-  height: 90vh;
+  grid-area: a;
   background-color: aquamarine;
+  padding: 1em;
+}
+.lista {
+  display: none;
+}
+.b {
+  grid-area: b;
+  background-color: blueviolet;
 }
 
 .navbar-text {
@@ -48,11 +54,14 @@ body {
 }
 .card-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  align-items: center;
+  margin: 1em;
+}
+
+.card2 {
+  display: none;
 }
 .button {
   background-color: ghostwhite;
@@ -65,10 +74,10 @@ body {
 }
 .d {
   grid-area: d;
-  height: 10vh;
   background-color: aquamarine;
+  padding: 1.5em;
 }
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   body {
     display: grid;
     grid-template-areas:
