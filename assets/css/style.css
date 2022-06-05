@@ -57,7 +57,7 @@ body {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  margin: 1em;
+  margin: 0.5em;
 }
 
 .card2 {
